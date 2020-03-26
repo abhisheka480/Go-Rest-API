@@ -92,7 +92,7 @@ func deleteEvent(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	router := mux.NewRouter().StrictSlash(true)
-	fmt.Println("API SURVER RUNNING ON localhost:8080")
+	fmt.Println("API SERVER RUNNING ON localhost:8080")
 	router.HandleFunc("/", homeLink)
 	router.HandleFunc("/event", createEvent).Methods("POST")
 	router.HandleFunc("/events", getAllEvents).Methods("GET")
